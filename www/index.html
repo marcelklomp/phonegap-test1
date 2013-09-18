@@ -30,20 +30,20 @@
         <div class="app">
             <h1>Marcel's Test</h1>
             <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
+                <p id="msg" class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
             </div>
         </div>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
-        <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
 		<form id="test">
 			Je naam? <input type="text" name="name" id="name" />
-			<button id="submit-it">Zeg het!</button>
+			<button id="submit-it" type="button">Zeg het!</button>
 		</form>
     </body>
 </html>
