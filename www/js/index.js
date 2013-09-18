@@ -49,7 +49,7 @@ var app = {
     }
 };
 
-$(document).ready(function(){
+$(document).bind('pageinit',function(){
 	$('#submit-it').on('tap', function(){
 		$.post("http://www.ifthen.nl/appapi/index.php", {
 			name: $('#name').val()
