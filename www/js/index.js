@@ -34,6 +34,7 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+		
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -47,3 +48,17 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
+$(document).ready(function(){
+	$('#submit-it').on('tap', function(){
+		$.post("http://www.ifthen.nl/appapi/index.php", {
+			name: $('#name').val()
+		},function(data){
+			if (data.status=='success') {
+				$('#msg').html(data.msg);
+			} else {
+				$('#msg').html('failed');
+			}
+		},'JSON');	
+	});
+});
